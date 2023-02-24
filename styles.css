@@ -14,6 +14,20 @@ html {
 body {
     max-width: 100vw;
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+select {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 16px;
+    width: 100%;
+    max-width: 200px;
 }
 
 ul {
@@ -60,6 +74,16 @@ button:active {
 
 a:hover {
     text-decoration: underline;
+}
+
+.container {
+    padding: 56px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .highlighted__text {
@@ -250,16 +274,6 @@ header {
     transform: translateY(100%) rotate(180deg);
 }
 
-.container {
-    padding: 56px 0;
-}
-
-.row {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .highlight__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -297,7 +311,7 @@ header {
     max-width: 280px;
 }
 
-/* Features */
+/* Featured */
 
 #featured {
     background-color: rgba(115, 66, 214, 0.1);
@@ -353,6 +367,7 @@ header {
     padding-right: 6px;
 }
 
+
 /* exploreMore */
 
 #explore {
@@ -368,6 +383,7 @@ header {
 
 footer {
     background-color: #242424;
+    margin-top: auto;
 }
 
 .logo__wrapper {
@@ -397,6 +413,59 @@ footer {
 .footer__link:hover {
     cursor: pointer;
 }
+
+/*  All Books */
+
+#books__body {
+    background-color: rgba(115, 66, 214, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.books__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    margin-bottom: 24px;
+}
+
+.books__header--title {
+    margin-bottom: 0;
+}
+
+.books__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 60px;
+    color: #7342d6;
+}
+
+.books__loading--spinner {
+    display: none !important;
+}
+
+.books__loading .books__loading--spinner {
+    display: block !important;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
